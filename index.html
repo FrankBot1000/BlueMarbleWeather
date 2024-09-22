@@ -10,11 +10,18 @@
 <li>Git &amp; GitHub</li>
 </ul>
 <h1>Animated Weather Data</h1>
-<p>…ADD VIDEO HERE (in place of below)…</p>
-<!-- https://github.com/SAllen0400/step-readme/assets/10645516/2b4bc7c7-580c-49bf-9d13-38a55be0263c -->
-<p><img src="readme-animated-charts.mov" alt="readme-weight-diff" /></p>
+<figure>
+	<div>
+		<video width="500" controls poster="images/screenshots/BMW MainView Daily.png" muted preload="auto">
+			<source src="videos/BlueMarbleWeather_compressed.mp4" type="video/mp4">
+			<!-- For non-HTML5 browsers: -->
+			Your browser doesn't support the video tag. Click <a href=http://www.firefox.com>here</a> 
+			to download the Firefox browser for your operating system.
+		</video>
+	</div>
+</figure>
 <h1>SwiftUI vs UIKit…</h1>
-<p>It’s definitely is a big difference working in SwiftUI, as compared to UIKit. Using SwiftUI mechanisms like observable objects, @State and bindings for passing around data and updating views is definitely a lot faster to implement as compared to implementing delegates and building UIKit components, eg. table views.</p>
+<p>It’s definitely a big difference working in SwiftUI, as compared to UIKit. Using SwiftUI mechanisms like observable objects, @State and @Binding, for passing around data and updating views, is definitely a lot faster to implement as compared to implementing delegates and building out UIKit components, such as, table views.</p>
 <p>One of the things I enjoyed learning was how to integrate data from the Apple Weather API in a scrolling horizontal list view showing daily or hourly weather data, and to be present additional weather data below the view while selecting individual list items.</p>
 <p>Below is the code for retrieving current, daily and hourly weather:</p>
 <pre><code class="language-swift">import Foundation
@@ -143,12 +150,30 @@ struct HScrollViewForecast&lt;T: RandomAccessCollection&gt;: View {
 </code></pre>
 <br>
 </br>
-<p>…ADD NEW IMAGES HERE (in place of below)</p>
-<!-- ![readme-weight-diff](https://github.com/SAllen0400/step-readme/assets/10645516/afdef8cb-9e40-4fac-9548-87dbb708a35c) -->
-<p><img src="readme-weight-diff.png" alt="readme-weight-diff" /></p>
-<h1>Completeness</h1>
-<p>Although it’s a simple portfolio project, I’ve implemented the following</p>
+<table>
+<tr>
+	<td>
+	<img src="images/screenshots/BMW MainView Daily.png" alt="blue marble weather daily forecast" width="500"/>
+	</td>
+	<td>
+	<img src="images/screenshots/BMW Search Screen.png" alt="blue marble weather daily forecast" width="500"/>
+	</td>
+</tr>
+<tr>
+	<td>
+	<img src="images/screenshots/BMW Info Screen.png" alt="blue marble weather daily forecast" width="500"/>
+	</td>
+	<td>
+	<img src="images/screenshots/BMW Settings Screen.png" alt="blue marble weather daily forecast" width="500"/>
+	</td>
+</tr>
+</table>
+<!-- ![readme-bluemarbleweather-daily](../images/BMW%20MainView%20Daily.png) -->
+<h1>Code Implementations</h1>
+<p>Although it’s a simple project, I’ve implemented the following:</p>
 <ul>
+<li>MVVM Design Pattern; using ObservableObjects, Models and Views.</li>
+<li>SwiftUI components: ObservableObject, @EnvironmentObject, @ObservableObject, @StateObject, @State, @Binding</li>
 <li>Unit Testing</li>
 <li>Code documentation, DocC</li>
 <li>Error handling</li>
@@ -156,4 +181,13 @@ struct HScrollViewForecast&lt;T: RandomAccessCollection&gt;: View {
 <li>Empty states</li>
 <li>Text input validation</li>
 <li>Project organization</li>
+</ul>
+<h1>Future Considerations</h1>
+<ul>
+<li>Implement SwiftData, for storing larger amounts of location data</li>
+<li>Add a TabView for showing Weather Trends in Charts</li>
+<li>Implement a Weather Radar API</li>
+<li>Add Accessibility</li>
+<li>Add Localizations</li>
+<li>Add iOS, macOS, and VisionOS compatibility</li>
 </ul>
