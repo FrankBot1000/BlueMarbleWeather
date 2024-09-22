@@ -13,8 +13,8 @@ Blue Marble doesn't link your identity to your current location. It only saves y
 # Animated Weather Data
 <figure>
 	<div>
-		<video width="500" controls poster="../Images/BlueMarbleWeather/BMW MainView Daily.png" muted preload="auto">
-			<source src="../Videos/BlueMarbleWeather_compressed.mp4" type="video/mp4">
+		<video width="500" controls poster="images/screenshots/BMW MainView Daily.png" muted preload="auto">
+			<source src="videos/BlueMarbleWeather_compressed.mp4" type="video/mp4">
 			<!-- For non-HTML5 browsers: -->
 			Your browser doesn't support the video tag. Click <a href=http://www.firefox.com>here</a> 
 			to download the Firefox browser for your operating system.
@@ -171,18 +171,18 @@ Code for loading weather data from the main view:
 <table>
 <tr>
 	<td>
-	<img src="../images/BlueMarbleWeather/BMW MainView Daily.png" alt="blue marble weather daily forecast" width="500"/>
+	<img src="images/screenshots/BMW MainView Daily.png" alt="blue marble weather daily forecast" width="500"/>
 	</td>
 	<td>
-	<img src="../images/BlueMarbleWeather/BMW Search Screen.png" alt="blue marble weather daily forecast" width="500"/>
+	<img src="images/screenshots/BMW Search Screen.png" alt="blue marble weather daily forecast" width="500"/>
 	</td>
 </tr>
 <tr>
 	<td>
-	<img src="../images/BlueMarbleWeather/BMW Info Screen.png" alt="blue marble weather daily forecast" width="500"/>
+	<img src="images/screenshots/BMW Info Screen.png" alt="blue marble weather daily forecast" width="500"/>
 	</td>
 	<td>
-	<img src="../images/BlueMarbleWeather/BMW Settings Screen.png" alt="blue marble weather daily forecast" width="500"/>
+	<img src="images/screenshots/BMW Settings Screen.png" alt="blue marble weather daily forecast" width="500"/>
 	</td>
 </tr>
 </table>
