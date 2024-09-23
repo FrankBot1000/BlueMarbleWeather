@@ -19,7 +19,7 @@ This App doesn't link your identity to your current location. It only saves your
 * SwiftUI
 * Apple Weather
 * Unit Testing
-* DocC documentation
+* DocC Documentation
 * Git & GitHub
 <br></br>
 
@@ -36,11 +36,13 @@ This App doesn't link your identity to your current location. It only saves your
 </figure>
 <br></br>
 
-# SwiftUI vs UIKit...
-It's definitely a big difference working in SwiftUI, as compared to UIKit. Using SwiftUI mechanisms like observable objects, @State and @Binding, for passing around data and updating views, is definitely a lot faster to implement as compared to implementing delegates and building out UIKit components, such as, table views.
 
-One of the things I enjoyed learning was how to integrate data from the Apple Weather API in a scrolling horizontal list view showing daily or hourly weather data, and presenting additional weather data below the view while selecting individual list items.
+# SwiftUI vs UIKit...
+It's definitely a big difference working in SwiftUI, as compared to UIKit. Using observable objects, @State and @Binding, for passing around data and updating views, is definitely a lot faster to implement as compared to implementing delegates and building out UIKit components, such as, collection views and table views.
+
+One of the things I enjoyed learning was how to manage data from the Apple Weather API in a scrolling horizontal list view, that showed daily or hourly weather data, and presenting additional weather data below the view when selecting individual list items.
 <br></br>
+
 
 ## Below are Some Code Examples:
 ### Retrieving current, daily and hourly weather:
@@ -56,6 +58,7 @@ func currentHourlyDailyForecast(for location: CLLocation) async -> (CurrentWeath
 }
 ```
 <br></br>
+
 
 ### The daily/hourly scrolling view, called from the Main View:
 ```swift
@@ -128,7 +131,6 @@ struct HScrollViewForecast<T: RandomAccessCollection>: View {
 
 
 ### Code for loading weather data from the Main View:
-
 ```swift
 .task {
 	isLoadingData = true
@@ -165,6 +167,7 @@ func getWeatherData(for location: CLLocation) async {
 ```
 <br></br>
 
+
 # Sample Screen Shot Images
 <table>
 <tr>
@@ -186,35 +189,36 @@ func getWeatherData(for location: CLLocation) async {
 </table>
 <br></br>
 
-## Although it's a simple project, I've implemented the following:
+
+## Although it's a smaller project, I've implemented the following:
 #### Code Structure
 * Model-View-View-model (MVVM) Design Pattern
 * SwiftUI components: 
 	* ObservableObject, @EnvironmentObject, @ObservedObject, @StateObject
 	* @State, @FocusState, @Binding
+* Generics
 
 #### Testing/Error Handling
 * Unit Testing
-* Error handling
+* Error Handling
 * Alerts
-* Empty states
-* Text input validation
+* Empty States
+* Text Input Validation
 
 #### Customizations
-* Light and Dark Mode selections
-* Theme colors
-* Unit conversions
-* Start up screen options
+* Light and Dark Mode Options
+* Theme Color Options
+* Unit Conversions
+* Startup Screen Options
 
 #### Project Organization
-* Code documentation, DocC
-* Group folder project organization
+* Code Documentation (DocC)
+* Group Folder Organization
 * Privacy Manifest
 
 # Future Considerations
 * Implement SwiftData, for storing larger amounts of location data
 * Add a TabView for showing Weather Trends in Charts
 * Implement a Weather Radar API
-* Add Accessibility
-* Add Localizations
+* Add Accessibility, Localizations
 * Add iOS, macOS, and VisionOS compatibility
