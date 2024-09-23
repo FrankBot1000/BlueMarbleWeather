@@ -1,7 +1,19 @@
 # Blue Marble Weather
-Blue Marble Weather is a tvOS App built using Swift and SwiftUI that integrates Apple's Apple Weather API and the OpenDataSoft Geoname locations database. You can search for cities/towns (with a population > 1000) to find the current, daily and hourly weather data. 
-
-Blue Marble doesn't link your identity to your current location. It only saves your recently searched locations and provides custom settings for temperature and wind speed unit conversions, as well as custom theme color settings.
+<p>
+Blue Marble Weather is a tvOS App built using Swift and SwiftUI that integrates Apple's 
+</a>
+	<a href="https://developer.apple.com/weatherkit/data-source-attribution/"> 
+	<img width="80" src="images/pics/Apple_Weather_blk_en_3X_090122.png" alt="Apple Weather Image"</img> 
+</a>
+API.
+<br></br>
+This App doesn't link your identity to your current location. It only saves your recently searched locations and provides custom settings for temperature and wind speed unit conversions, as well as custom theme color settings. (The North Pole is the default location.)
+</p>
+<h2>Available for AppleTV</h2>
+<a href="https://apps.apple.com/app/blue-marble-weather/id6642685383">
+	<img src="images/pics/Download_on_Apple_TV_Badge_US-UK_RGB_blk_092917.svg" alt="Download on Apple TV"</img> 
+</a>
+<br></br>
 
 # Technologies Used
 * SwiftUI
@@ -9,6 +21,7 @@ Blue Marble doesn't link your identity to your current location. It only saves y
 * Unit Testing
 * DocC documentation
 * Git & GitHub
+<br></br>
 
 # Animated Weather Data
 <figure>
@@ -21,70 +34,56 @@ Blue Marble doesn't link your identity to your current location. It only saves y
 		</video>
 	</div>
 </figure>
+<br></br>
 
 # SwiftUI vs UIKit...
 It's definitely a big difference working in SwiftUI, as compared to UIKit. Using SwiftUI mechanisms like observable objects, @State and @Binding, for passing around data and updating views, is definitely a lot faster to implement as compared to implementing delegates and building out UIKit components, such as, table views.
 
-One of the things I enjoyed learning was how to integrate data from the Apple Weather API in a scrolling horizontal list view showing daily or hourly weather data, and to be present additional weather data below the view while selecting individual list items.
+One of the things I enjoyed learning was how to integrate data from the Apple Weather API in a scrolling horizontal list view showing daily or hourly weather data, and presenting additional weather data below the view while selecting individual list items.
+<br></br>
 
-Below is the code for retrieving current, daily and hourly weather:
-
+## Below are Some Code Examples:
+### Retrieving current, daily and hourly weather:
 ```swift
-import Foundation
-import WeatherKit
-import CoreLocation
-
-/// Includes the 'service' WeatherKit WeatherSearch.shared object.
-///
-/// Will primarily use the 'shared' static let property to access WeatherData methods.
-class WeatherData: ObservableObject {
-    static let shared   = WeatherData()
-    private let service = WeatherService.shared
-    
-    func currentHourlyDailyForecast(for location: CLLocation) async -> (CurrentWeather, Forecast<HourWeather>, Forecast<DayWeather>)? {
-        let currentDailyHourlyForcast = await Task.detached(priority: .userInitiated) {
-            let forcast = try? await self.service.weather(
-                for: location,
-                including: .current, .hourly, .daily)
-            return forcast
-        }.value
-        return currentDailyHourlyForcast
-    }
+func currentHourlyDailyForecast(for location: CLLocation) async -> (CurrentWeather, Forecast<HourWeather>, Forecast<DayWeather>)? {
+	let currentDailyHourlyForcast = await Task.detached(priority: .userInitiated) {
+		let forcast = try? await self.service.weather(
+			for: location,
+			including: .current, .hourly, .daily)
+		return forcast
+	}.value
+	return currentDailyHourlyForcast
 }
 ```
-<br>
-</br>
+<br></br>
 
-The daily/hourly scrolling view, called from the main view:
-
+### The daily/hourly scrolling view, called from the Main View:
 ```swift
 switch forecastSelection {
-                case .currently:
-                    CurrentlyView(currentWeather: currentWeather)
-                case .daily:
-                    HScrollViewForecast(weather: $dailyWeather, selectedItem: $selectedItem)
-                        .onChange(of: selectedItem) { oldValue, newValue in
-                            if let dailyWeather = dailyWeather, let selectedItem = selectedItem, (0..<dailyWeather.count).contains(selectedItem) {
-                                selectedDayWeather = dailyWeather[selectedItem]
-                            }
-                            
-                        }
-                case .hourly:
-                    HScrollViewForecast(weather: $hourlyWeather,
-                                        selectedItem: $selectedItem)
-                    .onChange(of: selectedItem) { oldValue, newValue in
-                        if let hourlyWeather = hourlyWeather, let selectedItem = selectedItem, (0..<hourlyWeather.count).contains(selectedItem) {
-                            selectedHourWeather = hourlyWeather[selectedItem]
-                        }
-                    }
-                }
+case .currently:
+	CurrentlyView(currentWeather: currentWeather)
+case .daily:
+	HScrollViewForecast(weather: $dailyWeather, selectedItem: $selectedItem)
+		.onChange(of: selectedItem) { oldValue, newValue in
+			if let dailyWeather = dailyWeather, let selectedItem = selectedItem, (0..<dailyWeather.count).contains(selectedItem) {
+				selectedDayWeather = dailyWeather[selectedItem]
+			}
+			
+		}
+case .hourly:
+	HScrollViewForecast(weather: $hourlyWeather,
+						selectedItem: $selectedItem)
+	.onChange(of: selectedItem) { oldValue, newValue in
+		if let hourlyWeather = hourlyWeather, let selectedItem = selectedItem, (0..<hourlyWeather.count).contains(selectedItem) {
+			selectedHourWeather = hourlyWeather[selectedItem]
+		}
+	}
+}
 ```
-<br>
-</br>
+<br></br>
 
 
-Code for the HScrollViewForecast:
-
+### Code for the horizontal ScrollView Forecast:
 ```swift
 /// The horizontal scroll view that presents the hourly or daily forcast.
 /// - Note: Both Forecast<HourWeather> and Forecast<DayWeather> conform to the RandomAccessCollection Protocol.
@@ -125,49 +124,48 @@ struct HScrollViewForecast<T: RandomAccessCollection>: View {
     }
 }
 ```
-<br>
-</br>
+<br></br>
 
 
-Code for loading weather data from the main view:
+### Code for loading weather data from the Main View:
 
 ```swift
 .task {
-                isLoadingData = true
-                
-                ...
-                
-                // Gets Initial GeoLocation Weather Data:
-                Task.detached {
-                    if let geoLocation = await geoFavoritesVM.geoLocationFrom(favorite: favoriteLocation) {
-                        await getWeatherData(for: geoLocation.cllLocation)
-                    }
-                }
-                
-				...
-            }
-            
-            ...
-            
-            func getWeatherData(for location: CLLocation) async {
-        Task.detached {
-            if let (current, hourly, daily) = await weatherServiceHelper.currentHourlyDailyForecast(for: location) {
-                let weatherAttribution      = await weatherServiceHelper.weatherAttribution()
-                
-                await MainActor.run {
-                    attribution             = weatherAttribution
-                    isLoadingData           = false
-                    self.currentWeather     = current
-                    self.dailyWeather       = daily
-                    self.hourlyWeather      = hourly
-                }
-            }
-        }
-    }
+	isLoadingData = true
+	
+	...
+	
+	// Gets Initial GeoLocation Weather Data:
+	Task.detached {
+		if let geoLocation = await geoFavoritesVM.geoLocationFrom(favorite: favoriteLocation) {
+			await getWeatherData(for: geoLocation.cllLocation)
+		}
+	}
+	
+	...
+}
+		
+	...
+		
+func getWeatherData(for location: CLLocation) async {
+	Task.detached {
+		if let (current, hourly, daily) = await weatherServiceHelper.currentHourlyDailyForecast(for: location) {
+			let weatherAttribution      = await weatherServiceHelper.weatherAttribution()
+			
+			await MainActor.run {
+				attribution             = weatherAttribution
+				isLoadingData           = false
+				self.currentWeather     = current
+				self.dailyWeather       = daily
+				self.hourlyWeather      = hourly
+			}
+		}
+	}
+}
 ```
-<br>
-</br>
+<br></br>
 
+# Sample Screen Shot Images
 <table>
 <tr>
 	<td>
@@ -186,20 +184,32 @@ Code for loading weather data from the main view:
 	</td>
 </tr>
 </table>
+<br></br>
 
-<!-- ![readme-bluemarbleweather-daily](../images/BMW%20MainView%20Daily.png) -->
+## Although it's a simple project, I've implemented the following:
+#### Code Structure
+* Model-View-View-model (MVVM) Design Pattern
+* SwiftUI components: 
+	* ObservableObject, @EnvironmentObject, @ObservedObject, @StateObject
+	* @State, @FocusState, @Binding
 
-# Code Implementations
-Although it's a simple project, I've implemented the following:
-* MVVM Design Pattern; using ObservableObjects, Models and Views.
-* SwiftUI components: ObservableObject, @EnvironmentObject, @ObservableObject, @StateObject, @State, @Binding
+#### Testing/Error Handling
 * Unit Testing
-* Code documentation, DocC
 * Error handling
 * Alerts
 * Empty states
 * Text input validation
-* Project organization
+
+#### Customizations
+* Light and Dark Mode selections
+* Theme colors
+* Unit conversions
+* Start up screen options
+
+#### Project Organization
+* Code documentation, DocC
+* Group folder project organization
+* Privacy Manifest
 
 # Future Considerations
 * Implement SwiftData, for storing larger amounts of location data
