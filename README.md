@@ -223,7 +223,9 @@ func getWeatherData(for location: CLLocation) async {
 * Add Accessibility, Localizations
 * Add iOS, macOS, and VisionOS compatibility
 <br></br>
+<br></br>
+
 
 # FeedBack
-<p class="contact-message">If you have any feedback or suggestions you can reach out using this <a class="btn" href="mailto:fbotlogic@fbotlogicsolutions.com?subject=Blue Marble Weather Support">Email</a> link.</p>
+<p class="contact-message">If you have any feedback or suggestions you can reach out via <a class="btn" href="mailto:fbotlogic@fbotlogicsolutions.com?subject=Blue Marble Weather Support">Email</a>.</p>
 
