@@ -1,15 +1,15 @@
 # Blue Marble Weather
 <p>
-Blue Marble Weather is a tvOS App built using Swift and SwiftUI that integrates Apple's API
+Blue Marble Weather is a tvOS App built using Swift and SwiftUI that integrates Apple's Weather API,
 <a href="https://developer.apple.com/weatherkit/data-source-attribution/"> 
-	<img width="80" src="images/pics/Apple_Weather_blk_en_3X_090122.png" alt="Apple Weather Image"</img> 
+		<img width="80" src="images/pics/Apple_Weather_wht_en_3X_090122.png" alt="Apple Weather Image"</img> 
 </a>
-<span style="white-space: pre-line">
-</span>
-<a href="https://developer.apple.com/weatherkit/data-source-attribution/"> 
-	<img width="80" src="images/pics/Apple_Weather_wht_en_3X_090122.png" alt="Apple Weather Image"</img> 
-</a>
-<br></br>
+<div style="display: inline-block;">
+	<a href="https://developer.apple.com/weatherkit/data-source-attribution/"> 
+		<img width="80" src="images/pics/Apple_Weather_blk_en_3X_090122.png" alt="Apple Weather Image"</img> 
+	</a>
+</div>
+
 This App doesn't link your identity to your current location. It only saves your recently searched locations and provides custom settings for temperature and wind speed unit conversions, as well as custom theme color settings. (The North Pole is the default location.)
 </p>
 <h2>Available for AppleTV</h2>
