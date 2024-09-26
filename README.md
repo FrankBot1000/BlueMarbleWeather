@@ -27,16 +27,14 @@ This App doesn't link your identity to your current location. It only saves your
 <br></br>
 
 # Animated Weather Data
-<figure>
-	<div>
-		<video width="500" controls poster="images/screenshots/BMW MainView Daily.png" muted preload="auto">
-			<source src="videos/BlueMarbleWeather_compressed.mp4" type="video/mp4">
-			<!-- For non-HTML5 browsers: -->
-			Your browser doesn't support the video tag. Click <a href=http://www.firefox.com>here</a> 
-			to download the Firefox browser for your operating system.
-		</video>
-	</div>
-</figure>
+<div>
+	<video width="500" controls poster="images/screenshots/BMW MainView Daily.png" muted preload="auto">
+		<source src="videos/BlueMarbleWeather_compressed.mp4" type="video/mp4">
+		<!-- For non-HTML5 browsers: -->
+		Your browser doesn't support the video tag. Click <a href=http://www.firefox.com>here</a> 
+		to download the Firefox browser for your operating system.
+	</video>
+</div>
 <br></br>
 
 
