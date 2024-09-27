@@ -26,11 +26,30 @@ This App doesn't link your identity to your current location. It only saves your
 * Git & GitHub
 <br></br>
 
-[//]: # "NB: Change '.mp4' in video file name to '.mov', for showing the video within a GitHub README.md markdown file."
+[//]: # "NB: Use https://github.com/user-attachments/assets/0b906d87-6c4f-476d-86da-3115bc2a64c3 as video source (derived first by dragging-dropping a video within the README.md file to get the url, and use videos/BlueMarbleWeather_compressed.mov for webpages."
 # Animated Weather Data
-<video width="500" src="videos/BlueMarbleWeather_compressed.mov">
+<video width="500" src="https://github.com/user-attachments/assets/0b906d87-6c4f-476d-86da-3115bc2a64c3">
 </video>
+
+[//]: # "For webpage, use embedded below figure instead"
+ <!--
+<figure>
+	<div>
+		<video width="500" controls poster="images/screenshots/BMW MainView Daily.png" muted preload="auto">
+			<source src="videos/BlueMarbleWeather_compressed.mp4" type="video/mp4"></source>
+			<!- - For non-HTML5 browsers: - ->
+			Your browser doesn't support the video tag. Click <a href=http://www.firefox.com>here</a> 
+			to download the Firefox browser for your operating system.
+		</video>
+	</div></figure>
+ </figure>
+ -->
+
 <br></br>
+
+
+
+
 
 
 # SwiftUI vs UIKit...
