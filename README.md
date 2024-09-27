@@ -50,10 +50,6 @@ This App doesn't link your identity to your current location. It only saves your
 <br></br>
 
 
-
-
-
-
 # SwiftUI vs UIKit...
 It's definitely a big difference working in SwiftUI, as compared to UIKit. Using observable objects, @State and @Binding, for passing around data and updating views, is definitely a lot faster to implement as compared to implementing delegates and building out UIKit components, such as, collection views and table views.
 
