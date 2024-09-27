@@ -28,14 +28,8 @@ This App doesn't link your identity to your current location. It only saves your
 
 [//]: # "NB: Change '.mp4' in video file name to '.mov', for showing the video within a GitHub README.md markdown file."
 # Animated Weather Data
-<div>
-	<video width="500" controls poster="images/screenshots/BMW MainView Daily.png" muted preload="auto">
-		<source src="videos/BlueMarbleWeather_compressed.mov" type="video/mov">
-		<!-- For non-HTML5 browsers: -->
-		Your browser doesn't support the video tag. Click <a href=http://www.firefox.com>here</a> 
-		to download the Firefox browser for your operating system.
-	</video>
-</div>
+<video width="500" src="videos/BlueMarbleWeather_compressed.mov">
+</video>
 <br></br>
 
 
