@@ -26,12 +26,14 @@ This App doesn't link your identity to your current location. It only saves your
 * Git & GitHub
 <br></br>
 
-[//]: # "NB: Use https://github.com/user-attachments/assets/0b906d87-6c4f-476d-86da-3115bc2a64c3 as video source (derived first by dragging-dropping a video within the README.md file to get the url, and use videos/BlueMarbleWeather_compressed.mov for webpages."
+
 # Animated Weather Data
+
+[//]: # "NB: For README.md Github videos, Use GitHub asset urls eg. https://github.com/user-attachments/assets/xxxxxPlaceholderFileNameHerexxxxx as video source (derived first by dragging-dropping a video within the README.md file to get the url)."
 <video width="500" src="https://github.com/user-attachments/assets/0b906d87-6c4f-476d-86da-3115bc2a64c3">
 </video>
 
-[//]: # "For webpage, use embedded below figure instead"
+[//]: # "For webpage, use embedded below figure instead."
  <!--
 <figure>
 	<div>
