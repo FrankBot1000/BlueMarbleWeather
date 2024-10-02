@@ -218,6 +218,9 @@ func getWeatherData(for location: CLLocation) async {
 * Empty States
 * Text Input Validation
 
+#### Security
+* Runtime Check for Debugger, in Assembly
+
 #### Customizations
 * Light and Dark Mode Options
 * Theme Color Options
