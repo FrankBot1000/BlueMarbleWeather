@@ -1,6 +1,6 @@
 # Blue Marble Weather
 <p>
-Blue Marble Weather is a tvOS App built using Swift and SwiftUI that integrates Apple's Weather API,
+Blue Marble Weather is a tvOS App, built using Swift and SwiftUI, for showing the current, daily, and hourly weather forecast via Apple's Weather API,
 <a href="https://developer.apple.com/weatherkit/data-source-attribution/"> 
 		<img width="80" src="images/pics/Apple_Weather_wht_en_3X_090122.png" alt="Apple Weather Image"</img> 
 </a>
@@ -12,6 +12,7 @@ Blue Marble Weather is a tvOS App built using Swift and SwiftUI that integrates 
 
 This App doesn't link your identity to your current location. It only saves your recently searched locations and provides custom settings for temperature and wind speed unit conversions, as well as custom theme color settings. (The North Pole is the default location.)
 </p>
+
 <h2>Available for AppleTV</h2>
 <a href="https://apps.apple.com/app/blue-marble-weather/id6642685383">
 	<img src="images/pics/Download_on_Apple_TV_Badge_US-UK_RGB_blk_092917.svg" alt="Download on Apple TV"</img> 
