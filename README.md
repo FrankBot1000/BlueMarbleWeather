@@ -31,8 +31,9 @@ This App doesn't link your identity to your current location. It only saves your
 # Animated Weather Data
 
 [//]: # "NB: For README.md Github videos, Use GitHub asset urls eg. https://github.com/user-attachments/assets/xxxxxPlaceholderFileNameHerexxxxx as video source (derived first by dragging-dropping a video within the README.md file to get the url)."
-<video width="500" src="https://github.com/user-attachments/assets/160419dd-35f1-49ca-860e-f76e99845be0">
+<video width="500" src="https://github.com/user-attachments/assets/9af2a3d1-b039-4f58-b1ca-05de93df3089">
 </video>
+
 
 [//]: # "For webpage, use embedded below figure instead."
  <!--
