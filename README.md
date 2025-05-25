@@ -186,18 +186,18 @@ func getWeatherData(for location: CLLocation) async {
 <table>
 <tr>
 	<td>
-	<img src="images/screenshots/02 BMW Home Daily NorthPole Blue 011325.png" alt="blue marble weather daily forecast" width="500"/>
+	<img src="images/screenshots/02 BMW Home Daily North Pole 041425.png" alt="blue marble weather daily forecast" width="500"/>
 	</td>
 	<td>
-	<img src="images/screenshots/04 BMW Edinburgh Search 011325.png" alt="blue marble weather daily forecast" width="500"/>
+	<img src="images/screenshots/05 BMW Search Indianapolis 041425.png" alt="blue marble weather daily forecast" width="500"/>
 	</td>
 </tr>
 <tr>
 	<td>
-	<img src="images/screenshots/05 BMW Info 011325.png" alt="blue marble weather daily forecast" width="500"/>
+	<img src="images/screenshots/06 BMW InfoView Blue 052325 V152B657.png" alt="blue marble weather daily forecast" width="500"/>
 	</td>
 	<td>
-	<img src="images/screenshots/06 BMW Settings 011325.png" alt="blue marble weather daily forecast" width="500"/>
+	<img src="images/screenshots/06c BMW Settings Blue 041425.png" alt="blue marble weather daily forecast" width="500"/>
 	</td>
 </tr>
 </table>
