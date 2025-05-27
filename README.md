@@ -207,7 +207,7 @@ func getWeatherData(for location: CLLocation) async {
 
 ## Although it's a smaller project, I've implemented the following:
 #### Code Structure
-* Model-View-View-model (MVVM) Design Pattern
+* Model-View-View-Model (MVVM) Design Pattern
 * SwiftUI components: 
 	* ObservableObject, @EnvironmentObject, @ObservedObject, @StateObject
 	* @State, @FocusState, @Binding
