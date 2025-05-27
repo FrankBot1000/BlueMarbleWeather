@@ -210,7 +210,7 @@ func getWeatherData(for location: CLLocation) async {
 * Model-View-View-Model (MVVM) Design Pattern
 * SwiftUI components: 
 	* ObservableObject, @EnvironmentObject, @ObservedObject, @StateObject
-	* @State, @FocusState, @Binding
+	* @State, @Binding, @FocusState, @Published
 * Generics
 
 #### Testing/Error Handling
