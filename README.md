@@ -222,7 +222,7 @@ func getWeatherData(for location: CLLocation) async {
 
 #### Accessibility
 * Light/Dark Mode Settings
-* VoiceOver Accessibility
+* VoiceOver Accessibility (buttons & charts)
 
 #### Customizations
 * Light and Dark Mode Options
