@@ -37,16 +37,19 @@ This App doesn't link your identity to your current location. It only saves your
 
 [//]: # "For webpage, use embedded below figure instead."
  <!--
-<figure>
-	<div>
-		<video width="500" controls poster="images/screenshots/BMW MainView Daily.png" muted preload="auto">
-			<source src="videos/BlueMarbleWeather_compressed.mp4" type="video/mp4"></source>
-			<!- - For non-HTML5 browsers: - ->
-			Your browser doesn't support the video tag. Click <a href=http://www.firefox.com>here</a> 
-			to download the Firefox browser for your operating system.
-		</video>
-	</div></figure>
- </figure>
+ <div style="display: inline-block">
+	 <figure>
+		 <div>
+			 <video width="500" controls poster="images/screenshots/01 BMW tvOS26 Home Hourly North Pole1.png" muted preload="auto">
+				 <source src="videos/BMW Video tvOS26 compressed 092925.mp4" type="video/mp4">
+				 </source>
+				 <!- - For non-HTML5 browsers: - ->
+					 Your browser doesn't support the video tag. Click <a href=http://www.firefox.com>here</a>
+					 to download the Firefox browser for your operating system.
+			 </video>
+		 </div>
+	 </figure>
+ </div>
  -->
 
 <br></br>
@@ -187,18 +190,18 @@ func getWeatherData(for location: CLLocation) async {
 <table>
 <tr>
 	<td>
-	<img src="images/screenshots/02 BMW Home Daily North Pole 041425.png" alt="blue marble weather daily forecast" width="500"/>
+	<img src="images/screenshots/02b BMW tvOS26  Home Daily North Pole1.png" alt="blue marble weather daily forecast" width="500"/>
 	</td>
 	<td>
-	<img src="images/screenshots/05 BMW Search Indianapolis 041425.png" alt="blue marble weather daily forecast" width="500"/>
+	<img src="images/screenshots/04 BMW tvOS26  Search Dresden Germany.png" alt="blue marble weather search screen" width="500"/>
 	</td>
 </tr>
 <tr>
 	<td>
-	<img src="images/screenshots/06 BMW InfoView Blue 052325 V152B657.png" alt="blue marble weather daily forecast" width="500"/>
+	<img src="images/screenshots/06 BMW tvOS26  InfoView Blue V1.7.0B566.1.0.png" alt="blue marble weather daily info screen" width="500"/>
 	</td>
 	<td>
-	<img src="images/screenshots/06c BMW Settings Blue 041425.png" alt="blue marble weather daily forecast" width="500"/>
+	<img src="images/screenshots/05 BMW tvOS26  Settings Screen.png" alt="blue marble weather daily setting screen" width="500"/>
 	</td>
 </tr>
 </table>
