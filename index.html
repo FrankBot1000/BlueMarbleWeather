@@ -48,13 +48,13 @@ Blue Marble Weather is a tvOS App, built using Swift and SwiftUI, for showing th
 <h2>Below are Some Code Examples:</h2>
 <h3>Retrieving current, daily and hourly weather:</h3>
 <pre><code class="language-swift">func currentHourlyDailyForecast(for location: CLLocation) async -&gt; (CurrentWeather, Forecast&lt;HourWeather&gt;, Forecast&lt;DayWeather&gt;)? {
-	let currentDailyHourlyForcast = await Task.detached(priority: .userInitiated) {
-		let forcast = try? await self.service.weather(
+	let currentDailyHourlyForecast = await Task.detached(priority: .userInitiated) {
+		let forecast = try? await self.service.weather(
 			for: location,
 			including: .current, .hourly, .daily)
-		return forcast
+		return forecast
 	}.value
-	return currentDailyHourlyForcast
+	return currentDailyHourlyForecast
 }
 </code></pre>
 <p><br></br></p>
@@ -219,8 +219,7 @@ func getWeatherData(for location: CLLocation) async {
 <ul>
 <li>Implement SwiftData, for storing larger amounts of location data</li>
 <li>Add a TabView for showing Weather Trends in Charts</li>
-<li>Implement a Weather Radar API</li>
-<li>Add Accessibility, Localizations</li>
+<li>Add Localizations</li>
 <li>Add iOS, macOS, and VisionOS compatibility
 <br></br>
 <br></br></li>
