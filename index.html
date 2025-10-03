@@ -82,7 +82,7 @@ case .hourly:
 </code></pre>
 <p><br></br></p>
 <h3>Code for the horizontal ScrollView Forecast:</h3>
-<pre><code class="language-swift">/// The horizontal scroll view that presents the hourly or daily forcast.
+<pre><code class="language-swift">/// The horizontal scroll view that presents the hourly or daily forecast.
 /// - Note: Both Forecast&lt;HourWeather&gt; and Forecast&lt;DayWeather&gt; conform to the RandomAccessCollection Protocol.
 struct HScrollViewForecast&lt;T: RandomAccessCollection&gt;: View {
     @Binding var weather: T?
