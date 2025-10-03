@@ -63,13 +63,13 @@ One of the things I enjoyed learning was how to manage data from the Apple Weath
 ### Retrieving current, daily and hourly weather:
 ```swift
 func currentHourlyDailyForecast(for location: CLLocation) async -> (CurrentWeather, Forecast<HourWeather>, Forecast<DayWeather>)? {
-	let currentDailyHourlyForcast = await Task.detached(priority: .userInitiated) {
-		let forcast = try? await self.service.weather(
+	let currentDailyHourlyForecast = await Task.detached(priority: .userInitiated) {
+		let forecast = try? await self.service.weather(
 			for: location,
 			including: .current, .hourly, .daily)
-		return forcast
+		return forecast
 	}.value
-	return currentDailyHourlyForcast
+	return currentDailyHourlyForecast
 }
 ```
 <br></br>
@@ -238,8 +238,7 @@ func getWeatherData(for location: CLLocation) async {
 # Future Considerations
 * Implement SwiftData, for storing larger amounts of location data
 * Add a TabView for showing Weather Trends in Charts
-* Implement a Weather Radar API
-* Add Accessibility, Localizations
+* Add Localizations
 * Add iOS, macOS, and VisionOS compatibility
 <br></br>
 <br></br>
