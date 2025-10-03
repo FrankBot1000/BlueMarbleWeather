@@ -1,0 +1,8 @@
+{
+  "actions" : {
+    "run" : {
+      "enabled" : true,
+      "script" : "#!\/bin\/zsh\nBRANCH=$(git symbolic-ref --short HEAD)\n\n# Push to local bare repo\necho \"Pushing $BRANCH to local origin...\"\ngit push origin $BRANCH\n\n# Push to GitHub\necho \"Pushing $BRANCH to GitHub...\"\ngit push github-blueMarbleWeather $BRANCH\n\necho \"Done!\""
+    }
+  }
+}

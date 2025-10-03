@@ -1,0 +1,8 @@
+{
+  "actions" : {
+    "run" : {
+      "enabled" : true,
+      "script" : "#!\/bin\/zsh\n# Push the current branch to GitHub\ngit push github-blueMarbleWeather $(git symbolic-ref --short HEAD)\n"
+    }
+  }
+}
