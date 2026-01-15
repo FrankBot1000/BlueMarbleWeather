@@ -34,7 +34,6 @@ This App doesn't link your identity to your current location. It only saves your
 <video width="500" src="https://github.com/user-attachments/assets/626909d6-1306-474a-a61f-59a262506ea3">
 </video>
 
-
 [//]: # "For webpage, use embedded below figure instead."
  <!--
  <div style="display: inline-block">
