@@ -193,12 +193,12 @@ func getWeatherData(for location: CLLocation) async {
 	<img src="images/screenshots_v5/02b_v5 BMW Home Daily Halifax.png" alt="blue marble weather daily forecast" width="500"/>
 	</td>
 	<td>
-	<img src="images/screenshots_v5/03_v5 BMW Search Krakow Poland.png" alt="blue marble weather search screen" width="500"/>
+	<img src="images/screenshots_v5/01b_v5 BMW Trends Precip Halifax.png" alt="blue marble weather trends precipitation screen" width="500"/>
 	</td>
 </tr>
 <tr>
 	<td>
-	<img src="images/screenshots_v5/01b_v5 BMW Trends Precip Halifax.png" alt="blue marble weather trends precipitation screen" width="500"/>
+	<img src="images/screenshots_v5/03_v5 BMW Search Krakow Poland.png" alt="blue marble weather search screen" width="500"/>
 	</td>
 	<td>
 	<img src="images/screenshots_v5/05_v5 BMW Settings Screen.png" alt="blue marble weather daily setting screen" width="500"/>
