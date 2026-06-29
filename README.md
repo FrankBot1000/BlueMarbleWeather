@@ -21,6 +21,7 @@ This App doesn't link your identity to your current location. It only saves your
 
 # Technologies Used
 * SwiftUI
+* SwiftCharts
 * Apple Weather
 * Unit Testing
 * DocC Documentation
@@ -57,7 +58,7 @@ This App doesn't link your identity to your current location. It only saves your
 # SwiftUI vs UIKit...
 It's definitely a big difference working in SwiftUI, as compared to UIKit. Using observable objects, @State and @Binding, for passing around data and updating views, is definitely a lot faster to implement as compared to implementing delegates and building out UIKit components, such as, collection views and table views.
 
-One of the things I enjoyed learning was how to manage data from the Apple Weather API in a scrolling horizontal list view, that showed daily or hourly weather data, and presenting additional weather data below the view when selecting individual list items.
+One of the core challenges was how to manage data from the Apple Weather API in a scrolling horizontal list view, that showed daily or hourly weather data, and presenting additional weather data below the view when selecting individual list items.
 <br></br>
 
 
@@ -239,7 +240,6 @@ func getWeatherData(for location: CLLocation) async {
 
 # Future Considerations
 * Implement SwiftData, for storing larger amounts of location data
-* Add a TabView for showing Weather Trends in Charts
 * Add Localizations
 * Add iOS, macOS, and VisionOS compatibility
 <br></br>
